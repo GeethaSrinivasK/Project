@@ -1,0 +1,42 @@
+.image{
+    height:30em; background-size:cover; width:auto;
+    background-image:url('/assets/img/splash-2018.jpg');
+    background-position:50% 50%;
+  }
+  .splash {
+    margin: 0 1em;
+        margin-top: 80px;
+        margin-right: 1em;
+        margin-bottom: 0px;
+        margin-left: 1em;
+    width: 40%;
+    float: right;
+  }
+  .hero {
+    font-size: 1.5em;
+    font-family: 'Bariol Light',Arial;
+    text-align: center;
+  }
+  .splash h3 {
+    color: #fff;
+    font-size: 2.5em;
+  }
+  .how-it-works h3 {
+    margin: 0 auto .25em;
+    padding-top: 1em;
+    color: #2D383C;
+    text-align: center;
+    font-size: 54px;
+    width: 90%;
+    font-family: 'Bariol Light',Arial;
+  }
+  button{
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  }
+  

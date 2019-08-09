@@ -1,0 +1,45 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Workout Plan</h4>
+                    </div>
+                    <div class="content">
+                        <form>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                            
+                                        <label>Activity</label>
+
+                                        <select id="select" class="form-control">
+                                               
+                                                <option  *ngFor="let list of list" >{{list}}</option>
+                                              </select>
+                                    
+                                </div>
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Number of minutes worked</label>
+                                        <input type="number" class="form-control" required="true" #minutes>
+                                        <div *ngIf="err">{{err}}</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <button (click)="save(minutes.value)" class="btn btn-round btn-fill btn-info">Save</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

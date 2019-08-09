@@ -1,0 +1,127 @@
+
+<div class="main-content" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Edit Profile</h4>
+                        </div>
+                        <div class="content">
+                            <form id="register" >
+                                <div class="row">
+    
+                                    <div class="col-md-6">
+                                        <div class="form-group has-label ">
+                                            <label *ngIf="username">Username</label>
+                                            <input class="form-control" id="user" value={{username}} aria-required="true" readonly="true" aria-invalid="true"> 
+                                           
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group has-label has-error">
+                                            <label  *ngIf="email">Email address</label>
+                                            <input type="email" value={{email}} name="email" class="form-control" required="true" readonly="true" aria-invalid="true">
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group ">
+                                            <label>Age</label>
+                                            <input type="text" (keypress)="hide()" class="form-control" id="age"  required="true" #age1>
+                                        <div *ngIf="age" id="ag" style="color: red;">{{age}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Height in Inches(1 feet =12 inches)</label>
+                                            <input type="text"  (keypress)="hide1()" class="form-control" id="height"  required="true" #height>
+                                           
+                                            <div *ngIf="ht" id="ht" style="color: red;">{{ht}}</div>
+                                       
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Weight</label>
+                                            <input type="text" (keypress)="hide2()" class="form-control" id="weight"  required="true"#weight>
+                                            <div *ngIf="wt" id="wt" style="color: red;">{{wt}}</div>
+                                       
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Phonenumber</label>
+                                            <input type="text"  (keypress)="hide3()" class="form-control" id="phonenumber" required="true" #phonenumber>
+                                            <div *ngIf="ph" id="ph" style="color: red;">{{ph}}</div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>What you need</label>
+                                                    </div>
+                                         </div>
+                                         <div class="col-md-4">
+                                                <div class="form-group">
+                                                  
+                                                        <label> <input type="radio" (click)="show1()" id="lw" name="xy" >Lossweight</label>
+                                                     
+                                                    </div>
+                                         </div>
+                                         <div class="col-md-4">
+                                                <div class="form-group">
+                                                  
+                                                      
+                                                        <label> <input type="radio" (click)="show()" id="gw" name="xy">Gainweight</label>
+                                                   
+                                                    </div>
+                                         </div>
+
+                                         
+                                </div>
+                                <div *ngIf="act" id="act" style="color: red;">{{act}}</div>
+                           
+
+                                <div class="row" id="tab" style="display: none">
+                                        <table class="table"  style="text-align: center;width:300px;margin-left:100px" >
+                                            <thead class="thead-dark">
+                                                <th></th>
+                                                <th>Activity</th>
+                                                <th>Time</th>
+                                                <th>Calaries</th>
+                                            </thead>
+                                           
+                                            <tr *ngFor="let list of list">
+                                                <td><input type="checkbox" name="xyz"></td>
+                                           <td  > 
+                                              {{list.plan}}
+                                        </td>
+                                      <td>{{list.time}}</td>
+                                  <td>{{list.calories}}</td></tr>
+                                 
+                                  </table>
+                                 
+                                          </div>
+                                <button type="submit" class="btn btn-info btn-fill pull-right" (click)="validate(age1.value,height.value,weight.value,phonenumber.value)">Update Profile</button>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+               
+    
+            </div>
+        </div>
+    </div>
+   
+    
